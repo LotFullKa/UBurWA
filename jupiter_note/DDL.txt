@@ -1,0 +1,41 @@
+CREATE TABLE VW_JDLV_SALES
+  (
+    "PGI_DATE"       DATE,
+    "SHIP_TO"        VARCHAR2(32 BYTE),
+    "SKU"            VARCHAR2(32 BYTE),
+    "VOL"            NUMBER,
+    "DISCOUNT"       NUMBER
+  );  
+  
+CREATE TABLE MD_CUSTOMERS
+  (
+    "SHIP_TO"        VARCHAR2(32),
+    "SALES_DISTRICT" VARCHAR2(32),
+    "SALES_OFFICE"   VARCHAR2(32),
+    "SALES_GROUP"    VARCHAR2(32),
+    "IND_CODE"       VARCHAR2(32),
+    "RETAIL_CHAIN"   VARCHAR2(32),
+    "CUST_GRP"       VARCHAR2(32),
+    "PROXI_CATEG2"   VARCHAR2(32) DEFAULT '##',
+    "PROXI_CATEG3"   VARCHAR2(32) DEFAULT '##',
+    "TERR_LVL2"      VARCHAR2(32) DEFAULT '##',
+    "TERR_LVL3"      VARCHAR2(32) DEFAULT '##'    
+  ); 
+  
+CREATE TABLE TD_RES_FORECAST
+  (
+    "TEAM"          VARCHAR2(30 BYTE),
+    "FORECAST_DATE" DATE,
+    "SKU"           VARCHAR2(32 BYTE),
+    "SHIP_TO"       VARCHAR2(32 BYTE),
+    "FORECAST_VOL"  NUMBER
+  );
+
+CREATE TABLE TD_RES_ND_WD
+  (
+    "TEAM"      VARCHAR2(30 BYTE),
+    "SKU"       VARCHAR2(32 BYTE),
+    "TERR_LVL3" VARCHAR2(32 BYTE),
+    "WD"        NUMBER,
+    "ND"        NUMBER
+  );
